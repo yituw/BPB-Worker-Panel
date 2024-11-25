@@ -4,7 +4,7 @@ let userID, dohURL, proxyIP, trojanPassword, defaultHttpPorts, defaultHttpsPorts
 
 function initParams(request, env) {
     const proxyIPs = env.PROXYIP?.split(',').map(proxyIP => proxyIP.trim());
-    userID = env.UUID || '89b3cbba-e6ac-485a-9481-976a0415eab9';
+    userID = env.UUID || '4aaa183c-3c5f-4b2f-a7f1-182a53e20e51';
     if (!isValidUUID(userID)) throw new Error(`Invalid UUID: ${userID}`);
     dohURL = env.DOH_URL || 'https://cloudflare-dns.com/dns-query';
     proxyIP = proxyIPs ? proxyIPs[Math.floor(Math.random() * proxyIPs.length)] : defaultProxyIP;
